@@ -7,28 +7,31 @@ class(gapminder)
 gapminder
 as_tibble(iris)
 
+## know your basic data structure
 names(gapminder)
 ncol(gapminder)
 nrow(gapminder)
 dim(gapminder)
 length(gapminder)
 
+## overall picture
 summary(gapminder)
 
+## smell test
 plot(lifeExp ~ year, gapminder)
 plot(lifeExp ~ gdpPercap, gapminder)
 plot(lifeExp ~ log(gdpPercap), gapminder)
 
-#' target measure
+## target measure
 head(gapminder$lifeExp)
 summary(gapminder$lifeExp)
 hist(gapminder$lifeExp)
 
-#' time variable
+## time variable
 summary(gapminder$year)
 table(gapminder$year)
 
-#' category variable
+## category variable
 class(gapminder$continent)
 summary(gapminder$continent)
 levels(gapminder$continent)
