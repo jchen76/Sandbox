@@ -1,5 +1,6 @@
 ## http://stat545.com/bit001_dplyr-cheatsheet.html
 
+#suppressPackageStartupMessages(library(dplyr))
 library(readr)
 
 superheroes <- "
