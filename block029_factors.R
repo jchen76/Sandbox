@@ -20,7 +20,7 @@ h_countries <- c("Egypt", "Haiti", "Romania", "Thailand", "Venezuela")
 h_gap <- gapminder %>%
   filter(country %in% h_countries)
 nlevels(h_gap$country)
-# drop levels
+# drop levels on the whole data frame
 h_gap_dropped <- h_gap %>% 
   droplevels()
 nlevels(h_gap_dropped$country)
@@ -83,3 +83,19 @@ i_gap <- gapminder %>%
 i_gap$country %>% levels()
 i_gap$country %>%
   fct_recode("USA" = "United States", "Oz" = "Australia") %>% levels()
+
+# Grow a factor
+df1 <- gapminder %>%
+  filter(country %in% c("United States", "Mexico"), year > 2000) %>%
+  droplevels()
+df2 <- gapminder %>%
+  filter(country %in% c("France", "Germany"), year > 2000) %>%
+  droplevels()
+# Concatenate factors
+fct_c(df1$country, df2$country)
+
+#> Warning in bind_rows_(x, .id): Unequal factor levels: coercing to character
+#> Warning in bind_rows_(x, .id): binding character and factor vector,
+#> coercing into character vector
+bind_rows(df1, df2)
+rbind(df1, df2)
