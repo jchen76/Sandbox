@@ -32,7 +32,7 @@ tibble(fruit) %>%
   head() %>% 
   mutate(snip = str_sub(fruit, 1:6, 3:8))
 # str_sub() also works for assignment, i.e. on the left hand side of <-.
-x <- head(fruit, 3)
+(x <- head(fruit, 3))
 str_sub(x, 1, 3) <- "AAA"
 x
 
