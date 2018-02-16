@@ -1,5 +1,8 @@
 ## ref: http://stat545.com/block009_dplyr-intro.html
 
+library(gapminder)
+library(tidyverse)
+
 ## Meet the new pipe operator
 gapminder %>% head()
 
