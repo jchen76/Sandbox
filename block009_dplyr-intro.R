@@ -3,7 +3,7 @@
 library(gapminder)
 library(tidyverse)
 
-## Meet the new pipe operator
+## Meet the new pipe operator, CTRL + SHIFT + M
 gapminder %>% head()
 
 ## Use filter() to subset data row-wise
