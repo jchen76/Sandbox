@@ -97,3 +97,4 @@ str_subset(countries, pattern = "\\.")
 str_subset(x, pattern = "\\[")
 
 # Groups and backreferences
+# You can use parentheses inside regexes to define groups and you can refer to those groups later with backreferences.

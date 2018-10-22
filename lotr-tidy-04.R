@@ -10,7 +10,7 @@ rking <- read.csv(file.path("lotr-tidy-data", "The_Return_Of_The_King.csv"))
 # it would be a problem, if we combine variables in factors.
 # rbind automatically converts them into char.
 lotr_untidy <- rbind(fship, ttow, rking)
-lotr_tidy
+lotr_untidy
 
 # another way to read files into a list
 lotr_files <- file.path("lotr-tidy-data", c("The_Fellowship_Of_The_Ring.csv",
